@@ -1,7 +1,7 @@
 import os
 import openai
 
-openai.api_key = os.getenv('API_KEY')
+openai.api_key = os.getenv('API_KEY', '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')
 
 def generate_response(message):
     response = openai.Completion.create(
