@@ -1,7 +1,7 @@
-import os
 import openai
+from decouple import config as decouple_config
 
-openai.api_key = os.getenv('API_KEY', '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')
+openai.api_key = decouple_config('API_KEY', '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')
 
 def generate_response(message):
     response = openai.Completion.create(
